@@ -69,14 +69,16 @@ Here are the examples when you ran the commands:
 ## Step 4: Moving Files with **scp**
 In this step, you learn how to copy files back and forth between the computer on the server. Use the Command **scp** on your client Terminal (not connected to **ieng6**). Create a file called **WhereAmI.java** on your computer and enter the following contents into it:
 
-  class WhereAmI {
-    public static void main(String[] args) {
-      System.out.println(System.getProperty("os.name"));
-      System.out.println(System.getProperty("user.name"));
-      System.out.println(System.getProperty("user.home"));
-      System.out.println(System.getProperty("user.dir"));
-    }
+```
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
   }
+}
+```
 
 Use the comands **javac** and **java** on your Terminal to compile and run the WhereAmI.java file like below.
 
