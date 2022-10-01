@@ -37,14 +37,20 @@ Password:
 
 ```
 Last login: Mon Apr  4 09:54:02 2022 from its-cseb260-40.ucsd.edu
+
 Hello cs15lfa22by, you are currently logged into ieng6-203.ucsd.edu
+
 You are using 0% CPU on this system
+
 Cluster Status
 Hostname     Time    #Users  Load  Averages
 ieng6-201   17:00:01   20  0.43,  0.17,  0.10
 ieng6-202   17:00:01   15  0.14,  0.12,  0.13
 ieng6-203   17:00:01   18  0.01,  0.07,  0.06
+
+
 Wed Sep 28, 2022  5:02pm - Prepping cs15lfa22
+
 ```
 
 * If you run into some errors and can't connected to the server, please ask for help!
