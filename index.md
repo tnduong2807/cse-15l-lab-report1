@@ -12,13 +12,16 @@ When you completed installing VScode, open it and you should see a window of Vsc
 * First step, open a terminal in VSCode (Ctrl or Command + `, or press Terminal then New Terminal option on the menu bar). You should enter the command in the Terminal look like this but replace **by** with the letter in your course-specific account.
 `$ ssh cs15lfa22by@ieng6.ucsd.edu`
 * You will probably get a message like this because this is likely the first time you've connected to this server.
+
 ```
 ⤇ ssh cs15lfa22by@ieng6.ucsd.edu
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
+
 * It mean that someone is trying to control the connection and ask you for permission. So please type **yes** and press enter, then the Terminal interaction should look like this and please enter your **password**:
+
 ```
 # On your client
 ⤇ ssh cs15lfa22by@ieng6.ucsd.edu
@@ -27,7 +30,9 @@ RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? 
 Password: 
 ```
+
 * Now your terminal is connected to a computer in CSE basement and your Terminal should show this output:
+
 ```
 Last login: Mon Apr  4 09:54:02 2022 from its-cseb260-40.ucsd.edu
 
@@ -44,6 +49,7 @@ ieng6-203   17:00:01   18  0.01,  0.07,  0.06
 
 Wed Sep 28, 2022  5:02pm - Prepping cs15lfa22
 ```
+
 * If you run into some errors and can't connected to the server, please ask for help!
 
 ## Step 3: Trying Some Commands
@@ -65,6 +71,7 @@ Here are the examples when you ran the commands:
 
 ## Step 4: Moving Files with **scp**
 In this step, you learn how to copy files back and forth between the computer on the server. Use the Command **scp** on your client Terminal (not connected to **ieng6**). Create a file called **WhereAmI.java** on your computer and enter the following contents into it:
+
 ```
 class WhereAmI {
   public static void main(String[] args) {
@@ -75,20 +82,25 @@ class WhereAmI {
   }
 }
 ```
+
 Use the comands **javac** and **java** on your Terminal to compile and run the WhereAmI.java file like below.
+
 ```
 javac WhereAmI.java
 java WhereAmI
 ```
+
 **Skip this step if you didn't install **java** on your computer.**
 In your terminal, run this command and replace **cs15lfa22by** with your username:
 `scp WhereAmI.java cs15lfa22by@ieng6.ucsd.edu:~/`
 It will require you to enter your password just like when you log in the server with **ssh**. If you run into errors, please ask your help.
 Now log into ieng6 with **ssh**, and use the command **ls** (You should see the file there in your home directory on your Terminal!). You can run the **WhereAmI** program on the **ieng6** computer using the commands **javac** and **java** from above because **java** is installed on the server ieng6.
+
 ```
 javac WhereAmI.java
 java WhereAmI
 ```
+
 After you run the program, you Terminal should look like this:
 ![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(17).png?raw=true)
 
@@ -127,30 +139,38 @@ If you are on Windows, and have some problem with the **ssh-keygen** command, pl
 
 * Now two new files created on your system, the file **id_rsa** as the private key and the file **id_rsa.pub** as the public key stored in the **.shh** directory on your computer.
 * You need to copy the public key or the file **id_rsa.pub** to the **.ssh** directory of your user account on the server, enter the command:
+
 ```
 (On your computer terminal **not connected to the sever**)
 $ ssh cs15lfa22zz@ieng6.ucsd.edu
 <Enter Password to log in your server>
 ```
+
 ```
 (Now on your server terminal)
 $ mkdir .ssh
 $ <use command **exit** to logout>
 ```
+
 ```
 (Back to your computer terminal)
 $ scp /Users/duong/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 (Please use your username and the path you saw or set up in the command above)
 ```
+
 When you did this, you won't have to enter your password when your run **ssh** and **scp** from your client to the server.
 
 ## Step 6: Optimizing Remote Running
 Now you could make remote running more efficient by using shortcut or other features, try to get total times for a run after editing and saving to under 10 total keystrokes or click buttons/mouse.
 Here is some command could help you:
 * You can use command **ssh** in quotes at the end to directly run it on the remote server:
+
 `$ ssh cs15lfa22@ieng6.ucsd.edu "ls"`
+
 * You can run multiple commands on the same line by separate them with semicolons in most terminals:
+
 `$ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI`
+
 * You can use the up-arrow on your keyboard to recall the commands that was run.
 
 Here is an example output when you run those commands:
