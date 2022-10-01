@@ -59,6 +59,7 @@ There are some useful commands to try running:
 **To log out of the remote server on your terminal, you can use:**
 * Ctrl-D
 * Type the command **exit** and press enter
+
 Here are the examples when you ran the commands:
 ![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(22).png?raw=true)
 
@@ -151,6 +152,7 @@ Here is some command could help you:
 * You can run multiple commands on the same line by separate them with semicolons in most terminals:
 `$ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI`
 * You can use the up-arrow on your keyboard to recall the commands that was run.
+
 Here is an example output when you run those commands:
 ![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(25).png?raw=true)
 
