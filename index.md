@@ -10,7 +10,9 @@ When you completed installing VScode, open it and you should see a window of Vsc
 [**Install OpenSSH**](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
 * For reference, you could use this link and follow the instructions in [**"Connect to a remote host"**](https://code.visualstudio.com/docs/remote/ssh#_connect-to-a-remote-host).
 * First step, open a terminal in VSCode (Ctrl or Command + `, or press Terminal then New Terminal option on the menu bar). You should enter the command in the Terminal look like this but replace **by** with the letter in your course-specific account.
+
 `$ ssh cs15lfa22by@ieng6.ucsd.edu`
+
 * You will probably get a message like this because this is likely the first time you've connected to this server.
 
 ```
@@ -35,18 +37,13 @@ Password:
 
 ```
 Last login: Mon Apr  4 09:54:02 2022 from its-cseb260-40.ucsd.edu
-
 Hello cs15lfa22by, you are currently logged into ieng6-203.ucsd.edu
-
 You are using 0% CPU on this system
-
 Cluster Status
 Hostname     Time    #Users  Load  Averages
 ieng6-201   17:00:01   20  0.43,  0.17,  0.10
 ieng6-202   17:00:01   15  0.14,  0.12,  0.13
 ieng6-203   17:00:01   18  0.01,  0.07,  0.06
-
-
 Wed Sep 28, 2022  5:02pm - Prepping cs15lfa22
 ```
 
@@ -72,16 +69,14 @@ Here are the examples when you ran the commands:
 ## Step 4: Moving Files with **scp**
 In this step, you learn how to copy files back and forth between the computer on the server. Use the Command **scp** on your client Terminal (not connected to **ieng6**). Create a file called **WhereAmI.java** on your computer and enter the following contents into it:
 
-```
-class WhereAmI {
-  public static void main(String[] args) {
-    System.out.println(System.getProperty("os.name"));
-    System.out.println(System.getProperty("user.name"));
-    System.out.println(System.getProperty("user.home"));
-    System.out.println(System.getProperty("user.dir"));
+  class WhereAmI {
+    public static void main(String[] args) {
+      System.out.println(System.getProperty("os.name"));
+      System.out.println(System.getProperty("user.name"));
+      System.out.println(System.getProperty("user.home"));
+      System.out.println(System.getProperty("user.dir"));
+    }
   }
-}
-```
 
 Use the comands **javac** and **java** on your Terminal to compile and run the WhereAmI.java file like below.
 
