@@ -50,7 +50,6 @@ ieng6-203   17:00:01   18  0.01,  0.07,  0.06
 
 
 Wed Sep 28, 2022  5:02pm - Prepping cs15lfa22
-
 ```
 
 * If you run into some errors and can't connected to the server, please ask for help!
